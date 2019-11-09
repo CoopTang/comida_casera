@@ -18,6 +18,7 @@ RSpec.describe Nutrition, type: :model do
 
   describe 'relationships' do
     it { should belong_to :ingredient }
+    # TODO: test for dependent destruction
   end
 
   describe 'methods' do

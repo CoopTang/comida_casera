@@ -7,6 +7,7 @@ RSpec.describe Ingredient, type: :model do
 
   describe 'relationships' do
     it { should have_one :nutrition }
+    # TODO: test for dependent destruction
   end
 
   describe 'methods' do
@@ -17,6 +18,5 @@ RSpec.describe Ingredient, type: :model do
     it '#instance_method' do
 
     end
-
   end
 end
