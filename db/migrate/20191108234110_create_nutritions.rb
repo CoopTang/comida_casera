@@ -1,7 +1,8 @@
 class CreateNutritions < ActiveRecord::Migration[6.0]
   def change
     create_table :nutritions do |t|
-      t.integer :calories
+      t.integer :serving
+      t.integer :calorie
       t.float :saturated_fat
       t.float :polyunsaturated_fat
       t.float :monounsaturated_fat
@@ -14,6 +15,8 @@ class CreateNutritions < ActiveRecord::Migration[6.0]
       t.float :sugar
       t.float :protein
       t.references :ingredient, null: false, foreign_key: true
+
+      t.timestamps
     end
   end
 end

@@ -23,7 +23,8 @@ ActiveRecord::Schema.define(version: 2019_11_08_234110) do
   end
 
   create_table "nutritions", force: :cascade do |t|
-    t.integer "calories"
+    t.integer "serving"
+    t.integer "calorie"
     t.float "saturated_fat"
     t.float "polyunsaturated_fat"
     t.float "monounsaturated_fat"
@@ -36,6 +37,8 @@ ActiveRecord::Schema.define(version: 2019_11_08_234110) do
     t.float "sugar"
     t.float "protein"
     t.bigint "ingredient_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["ingredient_id"], name: "index_nutritions_on_ingredient_id"
   end
 
