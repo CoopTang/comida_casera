@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Nutrition, type: :model do
   describe 'validations' do
-    it { should validate_presence_of :calories }
+    it { should validate_presence_of :calorie }
     it { should validate_presence_of :saturated_fat }
     it { should validate_presence_of :polyunsaturated_fat }
     it { should validate_presence_of :monounsaturated_fat }

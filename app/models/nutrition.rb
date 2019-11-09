@@ -1,5 +1,5 @@
 class Nutrition < ApplicationRecord
-  validates_presence_of :calories,
+  validates_presence_of :calorie,
                         :saturated_fat,
                         :polyunsaturated_fat,
                         :monounsaturated_fat,
