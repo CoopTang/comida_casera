@@ -44,15 +44,39 @@ Once these are installed, clone the repository to your local machine with one of
 
 `git clone git@github.com:CoopTang/comida_casera.git`
 
+Once cloned onto your computer, `cd` into the project directory and run `bundle install ` to install all required gems for the project.
+
+**Database Setup**
+
+Run the following command to set up the database
+
+`rails db:{drop,create,migrate,seed}`
+
 ## API Reference
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
+There is currently no API for Comida Casera at the moment
 
 ## Tests
-Describe and show how to run the tests with code examples.
+[RSpec](https://github.com/rspec/rspec-rails) is the testing framwork used for testing.
+
+**To run all tests**
+
+`bundle exec rspec`
+
+This will run all tests in the `/spec` directory.
+
+
+**To run an entire test file**
+
+`bundle exec rspec spec/<path to specifc test>`
+
+**To run a specific test in a file**
+
+`bundle exec rspec spec/<path to specifc test>:<line number of the test>`
+
 
 ## How to use?
-If people like your project they’ll want to learn how they can use it. To do so include step by step guide to use your project.
+To start the server and view the site from the browser, start the server with `rails s` . By default, the server runs on http://localhost:3000
 
 ## Contribute
 
