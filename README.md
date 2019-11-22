@@ -23,13 +23,26 @@ Include logo/demo screenshot etc.
 - [Rails 6.0.1](https://rubyonrails.org/)
 
 ## Features
-What makes your project stand out?
+There are a multitude of websites out there to share recipes. There are even sites that will produce a random recipe for you if don't know what to make. Those sites don't take your pantry in mind though. Comida Casera is designed give you recipes you can actually make with what you currently have.
 
 ## Code Example
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
 
 ## Installation
-Provide step by step series of examples and explanations about how to get a development env running.
+### Requirements
+- [Ruby 2.6.3](https://github.com/ruby/ruby)
+- [Rails 6.0.1](https://rubyonrails.org/)
+- [PostgreSQL-11](https://www.postgresql.org/)
+
+Once these are installed, clone the repository to your local machine with one of the following commands:
+
+**HTTPS**
+
+`git clone https://github.com/CoopTang/comida_casera.git`
+
+**SSH**
+
+`git clone git@github.com:CoopTang/comida_casera.git`
 
 ## API Reference
 
