@@ -29,8 +29,8 @@ RSpec.describe 'When I am on any page of the site' do
 
   describe 'As a Registered User' do
     it 'I see a nav bar with links to all pages' do
-      user_1 = create(:user)
-
+      # user_1 = create(:user)
+      # allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user_1)
       
 
     end
