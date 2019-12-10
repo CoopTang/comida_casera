@@ -3,6 +3,12 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  resources :recipes, only: %i[show index]
+
+  resources :ingredients, only: %i[show index] do
+    resources :nutrition, only: %i[show]
+  end
+
   get  '/register', to: 'users#new'
   post '/users',    to: 'users#create'
 
