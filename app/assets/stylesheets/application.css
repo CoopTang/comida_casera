@@ -13,3 +13,49 @@
  *= require_tree .
  *= require_self
  */
+
+ h1 {
+  text-align: center;
+}
+
+img {
+  width: 75%;
+}
+
+img.center {
+ display: block;
+ margin: 0 auto;
+}
+
+.card {
+ margin: auto;
+ float: none;
+}
+
+.active {
+ color: green;
+}
+
+.inactive {
+ color: red;
+}
+
+.form-width {
+ width: 50%;
+ margin: 0 auto;
+}
+
+.img-container {
+ width: 48%;
+ position: relative;
+ margin-left: 5%;
+}
+
+.item-container {
+ display: flex;
+ flex-direction: row;
+}
+
+.text-container {
+ width: 48%;
+}

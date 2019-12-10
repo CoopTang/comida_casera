@@ -9,9 +9,11 @@ gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
-# gem 'redis', '~> 4.0'
-# gem 'bcrypt', '~> 3.1.7'
-# gem 'image_processing', '~> 1.2'
+gem 'factory_bot_rails'
+gem 'bcrypt', '~> 3.1.7'
+gem 'fast_jsonapi'
+gem 'faraday'
+gem 'figaro'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 
@@ -23,6 +25,9 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'simplecov'
+  gem 'awesome_print'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do  
