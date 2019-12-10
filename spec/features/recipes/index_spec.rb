@@ -5,6 +5,8 @@ RSpec.describe 'As a User,' do
     before :each do
       @recipe_1 = create(:recipe, name: 'Baked ziti', image: 'https://images.media-allrecipes.com/userphotos/720x405/5643924.jpg')
       @recipe_2 = create(:recipe, name: 'Chili Verde Quiche', image: 'https://images.media-allrecipes.com/userphotos/720x405/7103492.jpg')
+
+      visit root_path
     end
 
     it 'I can see a list of all recipes with the name and image' do
