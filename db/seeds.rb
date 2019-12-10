@@ -56,3 +56,34 @@ milk_whole.create_nutrition!(
   sugar: 12,
   protein: 8
 )
+
+baked_ziti = Recipe.create!(
+  name: 'Baked ziti',
+  image: 'https://images.media-allrecipes.com/userphotos/720x405/5643924.jpg'
+)
+
+chili_quiche = Recipe.create!(
+  name: 'Chili Verde Quiche',
+  image: 'https://images.media-allrecipes.com/userphotos/720x405/7103492.jpg'
+)
+
+peacan_pie_bars = Recipe.create!(
+  name: 'Southern Peacan Pie Bars',
+  image: 'https://images.media-allrecipes.com/userphotos/720x405/7244553.jpg'
+)
+
+fried_brussels_sprouts = Recipe.create!(
+  name: 'Fried Brussels Sprouts',
+  image: 'https://images.media-allrecipes.com/userphotos/720x405/2796210.jpg'
+)
+
+cajun_mashed_potatoes = Recipe.create!(
+  name: 'Cajun Mashed Potatoes',
+  image: 'https://images.media-allrecipes.com/userphotos/720x405/5890101.jpg'
+)
+
+tomato_basil_salmon = Recipe.create!(
+  name: 'Tomato Basil Salmon',
+  image: 'https://images.media-allrecipes.com/userphotos/720x405/691788.jpg'
+)
+
