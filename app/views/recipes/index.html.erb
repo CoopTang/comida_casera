@@ -1,0 +1,8 @@
+<section class="container-fluid row justify-content-center">
+  <% @recipes.each do |recipe| %>
+    <section class="card card-body bg-light m-3 p-4 col-md-3" id='recipe-<%=recipe.id%>'>
+      <h2 class="text-center"> <%=link_to recipe.name, "/recipes/#{recipe.id}" %> </h2>
+      <img class="center mt-4 mb-4" src= <%= recipe.image %>>
+    </section>
+  <% end %>
+</section>
