@@ -4,10 +4,13 @@ Rails.application.routes.draw do
 
   root 'recipes#index'
 
-  resources :recipes, only: %i[show index]
-
-  resources :ingredients, only: %i[show index] do
-    resources :nutrition, only: %i[show]
+  namespace :recipes do
+    resources :recipes, only: %i[show index]
   end
 
+  namespace :ingredients do
+    resources :ingredients, only: %i[show index] do
+      resources :nutrition, only: %i[show]
+    end
+  end
 end
