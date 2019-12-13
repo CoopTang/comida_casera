@@ -1,5 +1,22 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'validations' do
+    
+  end
+
+  describe 'relationships' do
+  
+  end
+
+  describe 'methods' do
+    it '::class_method' do
+
+    end
+
+    it '#instance_method' do
+
+    end
+
+  end
 end
