@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   root 'recipes/recipes#index'
 
@@ -12,5 +11,9 @@ Rails.application.routes.draw do
     resources :ingredients, only: %i[show index] do
       resource :nutrition, only: %i[show]
     end
+  end
+
+  scope module: 'users' do
+    resources :users, only: %i[show index]
   end
 end
