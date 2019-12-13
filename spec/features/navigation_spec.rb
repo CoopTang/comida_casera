@@ -11,13 +11,13 @@ RSpec.describe 'When I am on any page of the site' do
         click_link 'Sign Up'
       end
 
-      expect(current_path).to eq('/register')
+      expect(current_path).to eq('/users/sign_up')
 
       within 'nav' do
         click_link 'Log In'
       end
 
-      expect(current_path).to eq('/login')
+      expect(current_path).to eq('/users/sign_in')
 
       within 'nav' do
         click_link 'ComidaCasera'

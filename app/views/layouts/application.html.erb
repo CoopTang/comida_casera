@@ -40,18 +40,18 @@
           </form>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="/register">Sign Up <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/users/sign_up">Sign Up <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link" href="/login">Log In <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href='/users/sign_in'>Log In <span class="sr-only">(current)</span></a>
         </li>
       </ul>
     </div>
   </nav>
 
   <section class="container">
-    <% flash.each do |type, messages| %>
-      <% messages.each do |message| %>
+    <% flash.each do |messages| %>
+      <% messages.each do |type, message| %>
         <% if type == 'error' %>
           <article class="alert alert-danger mt-3 pb-0">
             <p><%= message %></p>
