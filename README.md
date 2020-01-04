@@ -5,10 +5,8 @@ A meal planning app designed to give you random recipies to cook. Comida Casera 
 Sifting through recipes online is always a chore when you are trying to use ingredients you already have. Comida Casera is the solution to that problem by picking recipes that only contain the ingredients you have in your pantry or fridge.
 
 ## Build status
-Build status of continus integration i.e. travis, appveyor etc. Ex. - 
 
-[![Build Status](https://travis-ci.org/akashnimare/foco.svg?branch=master)](https://travis-ci.org/akashnimare/foco)
-[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/akashnimare/foco?branch=master&svg=true)](https://ci.appveyor.com/project/akashnimare/foco/branch/master)
+[![Build Status](https://travis-ci.com/CoopTang/comida_casera.svg?branch=master)](https://travis-ci.org/CoopTang/comida_casera)
 
 ## Code style
 If you would like to contribute, this project follows Ruby/RuboCop conventions.
