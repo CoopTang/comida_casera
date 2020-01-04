@@ -1,11 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe Nutrient, type: :model do
+RSpec.describe Alias, type: :model do
   describe 'validations' do
     it { should validate_presence_of :name }
   end
 
   describe 'relationships' do
+    
   end
 
   describe 'methods' do
