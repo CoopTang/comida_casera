@@ -9,7 +9,6 @@ Rails.application.routes.draw do
 
   scope module: 'ingredients' do
     resources :ingredients, only: %i[show index] do
-      resource :nutrition, only: %i[show]
     end
   end
 
