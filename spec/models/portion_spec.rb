@@ -12,6 +12,12 @@ RSpec.describe Portion, type: :model do
   end
 
   describe 'methods' do
-    
+    before :each do
+      @large = create(:portion, name: "1 large", weight: 0.5)
+    end
+
+    it '#full_name' do
+      expect(@large.full_name).to eq("1 large (50 g)")
+    end
   end
 end
