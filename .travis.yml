@@ -1,10 +1,27 @@
 before_script:
   - psql -c 'create database comida_casera_test;' -U postgres
-  - rails webpacker:install
-  - RAILS_ENV=test bundle exec rails webpacker:compile
 
 language: ruby
+
 rvm :
  - 2.6.3
+
 services:
  - postgresql
+
+ cache:
+  bundler: true
+  directories:
+    - node_modules
+  yarn: true
+
+install:
+  - bundle install
+  - nvm install node
+  - node -v
+  - npm i -g yarn
+  - yarn
+
+script:
+  - bundle exec rails webpacker:compile
+  - bundle exec rails spec
