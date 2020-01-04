@@ -1,5 +1,6 @@
 before_script:
   - psql -c 'create database comida_casera_test;' -U postgres
+  - RAILS_ENV=test bundle exec rails webpacker:compile
 
 language: ruby
 rvm :
