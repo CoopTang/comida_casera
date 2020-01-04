@@ -1,0 +1,12 @@
+<h1>All Ingredients</h1>
+<section>
+  <% @ingredients.each do |ingredient| %>
+    <section class='ingredients'>
+      <ul>
+        <article id='ingredient-<%= ingredient.id %>'>
+          <li><%= link_to ingredient.name, ingredient_path(ingredient) %></li>
+        </article>
+      </ul>
+    </section>
+  <% end %>
+</section>
