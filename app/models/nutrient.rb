@@ -4,4 +4,6 @@ class Nutrient < ApplicationRecord
                         :value
 
   validates_numericality_of :value
+
+  belongs_to :ingredient
 end
