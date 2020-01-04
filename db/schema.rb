@@ -10,36 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_13_045852) do
+ActiveRecord::Schema.define(version: 2020_01_04_050619) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "aliases", force: :cascade do |t|
+    t.string "name"
+    t.bigint "ingredient_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["ingredient_id"], name: "index_aliases_on_ingredient_id"
+  end
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
     t.boolean "is_enabled", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "image"
   end
 
-  create_table "nutritions", force: :cascade do |t|
-    t.integer "serving"
-    t.integer "calorie"
-    t.float "saturated_fat"
-    t.float "polyunsaturated_fat"
-    t.float "monounsaturated_fat"
-    t.float "trans_fat"
-    t.integer "cholesterol"
-    t.integer "sodium"
-    t.integer "potassium"
-    t.float "total_carbohydrate"
-    t.float "dietary_fiber"
-    t.float "sugar"
-    t.float "protein"
+  create_table "nutrients", force: :cascade do |t|
+    t.string "name"
+    t.string "unit"
+    t.float "value"
     t.bigint "ingredient_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["ingredient_id"], name: "index_nutritions_on_ingredient_id"
+    t.index ["ingredient_id"], name: "index_nutrients_on_ingredient_id"
+  end
+
+  create_table "portions", force: :cascade do |t|
+    t.float "nutrient_weight"
+    t.bigint "ingredient_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["ingredient_id"], name: "index_portions_on_ingredient_id"
   end
 
   create_table "recipes", force: :cascade do |t|
@@ -64,5 +71,7 @@ ActiveRecord::Schema.define(version: 2019_12_13_045852) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "nutritions", "ingredients"
+  add_foreign_key "aliases", "ingredients"
+  add_foreign_key "nutrients", "ingredients"
+  add_foreign_key "portions", "ingredients"
 end
