@@ -15,7 +15,7 @@ describe 'Ingredients Show Page:' do
         @protein   = create(:nutrient_protein, ingredient: @egg)
 
         @large = create(:portion, name: "1 large", weight: 0.5, ingredient: @egg)
-        @cup   = create(:portion, name: "1 cup, chopped (136g)", weight: 1.36, ingredient: @egg)
+        @cup   = create(:portion, name: "1 cup", weight: 1.36, ingredient: @egg)
 
         @huevo = create(:alias, name: 'Huevo', ingredient: @egg)
       end
