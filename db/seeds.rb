@@ -6,65 +6,75 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-egg = Ingredient.create!(
-  name: 'Egg',
-  image: 'https://www.seriouseats.com/recipes/images/2014/04/20140430-peeling-eggs-10-1500x1125.jpg'
-)
-# egg.create_nutrition!(
-#   serving: 50,
-#   calorie: 78,
-#   saturated_fat: 1.6,
-#   polyunsaturated_fat: 0.7,
-#   monounsaturated_fat: 2.0,
-#   trans_fat: 0.0,
-#   cholesterol: 187,
-#   sodium: 62,
-#   potassium: 63,
-#   total_carbohydrate: 0.6,
-#   dietary_fiber: 0.0,
-#   sugar: 0.6,
-#   protein: 6
-# )
+Ingredient.destroy_all
+User.destroy_all
+Recipe.destroy_all
 
 bacon = Ingredient.create!(
   name: 'Bacon',
   image: 'https://www.simplyrecipes.com/wp-content/uploads/2019/08/baked-bacon-Lead-1.jpg'
 )
-# bacon.create_nutrition!(
-#   serving: 8,
-#   calorie: 43,
-#   saturated_fat: 1.1,
-#   polyunsaturated_fat: 0.4,
-#   monounsaturated_fat: 1.5,
-#   trans_fat: 0.0,
-#   cholesterol: 9,
-#   sodium: 137,
-#   potassium: 45,
-#   total_carbohydrate: 0.1,
-#   dietary_fiber: 0.0,
-#   sugar: 0.0,
-#   protein: 3
-# )
+bacon.create_nutrient!(name: 'energy', value: 417, unit: 'cal')
+bacon.create_nutrient!(name: 'total_fat', value: 40, unit: 'g')
+bacon.create_nutrient!(name: 'saturated_fat', value: 13, unit: 'g')
+bacon.create_nutrient!(name: 'polyunsaturated_fat', value: 6, unit: 'g')
+bacon.create_nutrient!(name: 'monounsaturated_fat', value: 17, unit: 'g')
+bacon.create_nutrient!(name: 'trans_fat', value: 0.1, unit: 'g')
+bacon.create_nutrient!(name: 'cholesterol', value: 66, unit: 'mg')
+bacon.create_nutrient!(name: 'sodium', value: 662, unit: 'mg')
+bacon.create_nutrient!(name: 'potassium', value: 198, unit: 'mg')
+bacon.create_nutrient!(name: 'total_carbohydrate', value: 1.3, unit: 'g')
+bacon.create_nutrient!(name: 'dietary_fiber', value: 0, unit: 'g')
+bacon.create_nutrient!(name: 'sugar', value: 0, unit: 'g')
+bacon.create_nutrient!(name: 'protein', value: 13, unit: 'g')
+
+bacon.create_portion!(name: '1 slice', weight: 0.28)
+
+bacon.create_alias!(name: 'tocino')
+
+egg = Ingredient.create!(
+  name: 'egg',
+  image: 'https://www.seriouseats.com/recipes/images/2014/04/20140430-peeling-eggs-10-1500x1125.jpg'
+)
+egg.create_nutrient!(name: 'energy', value: 143, unit: 'cal'
+egg.create_nutrient!(name: 'total_fat', value: 10, unit: 'g')
+egg.create_nutrient!(name: 'saturated_fat', value: 3.1, unit: 'g')
+egg.create_nutrient!(name: 'polyunsaturated_fat', value: 1.9, unit: 'g')
+egg.create_nutrient!(name: 'monounsaturated_fat', value: 3.7, unit: 'g')
+egg.create_nutrient!(name: 'trans_fat', value: 0, unit: 'g')
+egg.create_nutrient!(name: 'cholesterol', value: 372, unit: 'mg')
+egg.create_nutrient!(name: 'sodium', value: 142, unit: 'mg')
+egg.create_nutrient!(name: 'potassium', value: 138, unit: 'mg')
+egg.create_nutrient!(name: 'total_carbohydrate', value: 0.7, unit: 'g')
+egg.create_nutrient!(name: 'dietary_fiber', value: 0, unit: 'g')
+egg.create_nutrient!(name: 'sugar', value: 0.4, unit: 'g')
+egg.create_nutrient!(name: 'protein', value: 13, unit: 'g')
+
+egg.create_portion!(name: '1 large', weight: 0.5)
+
+egg.create_alias!(name: 'huevo')
 
 milk_whole = Ingredient.create!(
   name: 'Milk, whole',
   image: 'https://i0.wp.com/post.healthline.com/wp-content/uploads/2019/11/milk-soy-hemp-almond-non-dairy-1296x728-header-1296x728.jpg?w=1155&h=1528'
 )
-# milk_whole.create_nutrition!(
-#   serving: 244,
-#   calorie: 148,
-#   saturated_fat: 4.6,
-#   polyunsaturated_fat: 0.5,
-#   monounsaturated_fat: 2.0,
-#   trans_fat: 0.0,
-#   cholesterol: 24,
-#   sodium: 105,
-#   potassium: 322,
-#   total_carbohydrate: 12,
-#   dietary_fiber: 0.0,
-#   sugar: 12,
-#   protein: 8
-# )
+milk_whole.create_nutrient!(name: 'energy', value: 61, unit: 'cal')
+milk_whole.create_nutrient!(name: 'total_fat', value: 3.3, unit: 'g')
+milk_whole.create_nutrient!(name: 'saturated_fat', value: 1.9, unit: 'g')
+milk_whole.create_nutrient!(name: 'polyunsaturated_fat', value: 0.2, unit: 'g')
+milk_whole.create_nutrient!(name: 'monounsaturated_fat', value: 0.8, unit: 'g')
+milk_whole.create_nutrient!(name: 'trans_fat', value: 0, unit: 'g')
+milk_whole.create_nutrient!(name: 'cholesterol', value: 10, unit: 'mg')
+milk_whole.create_nutrient!(name: 'sodium', value: 43, unit: 'mg')
+milk_whole.create_nutrient!(name: 'potassium', value: 132, unit: 'mg')
+milk_whole.create_nutrient!(name: 'total_carbohydrate', value: 4.8, unit: 'g')
+milk_whole.create_nutrient!(name: 'dietary_fiber', value: 0, unit: 'g')
+milk_whole.create_nutrient!(name: 'sugar', value: 5, unit: 'g')
+milk_whole.create_nutrient!(name: 'protein', value: 3.2, unit: 'g')
+
+milk_whole.create_portion!(name: '1 cup', weight: 2.44)
+
+milk_whole.create_alias!(name: 'leche')
 
 baked_ziti = Recipe.create!(
   name: 'Baked ziti',
