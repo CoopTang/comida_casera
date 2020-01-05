@@ -27,31 +27,31 @@ describe 'Ingredients Show Page:' do
 
         expect(page).to have_content('Egg')
 
-        within "#nutrient-#{@energy}" do
+        within "#nutrient-#{@energy.id}" do
           expect(page).to have_content('Energy: 100 cal')
         end
 
-        within "#nutrient-#{@total_fat}" do
+        within "#nutrient-#{@total_fat.id}" do
           expect(page).to have_content('Total Fat: 1.6 g')
         end
 
-        within "#nutrient-#{@sodium}" do
+        within "#nutrient-#{@sodium.id}" do
           expect(page).to have_content('Sodium: 1 mg')
         end
 
-        within "#nutrient-#{@protein}" do
+        within "#nutrient-#{@protein.id}" do
           expect(page).to have_content('Protein: 1 g')
         end
 
-        within "#portion-#{@large}" do
+        within "#portion-#{@large.id}" do
           expect(page).to have_content("1 large (50 g)")
         end
 
-        within "#portion-#{@cup}" do
+        within "#portion-#{@cup.id}" do
           expect(page).to have_content("1 cup (136 g)")
         end
 
-        within "#alias-#{@huevo}" do
+        within "#alias-#{@huevo.id}" do
           expect(page).to have_content('Name: Huevo')
         end
       end
