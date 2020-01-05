@@ -28,19 +28,19 @@ describe 'Ingredients Show Page:' do
         expect(page).to have_content('Egg')
 
         within "#nutrient-#{@energy.id}" do
-          expect(page).to have_content('Energy: 100 cal')
+          expect(page).to have_content('Energy 100 cal')
         end
 
         within "#nutrient-#{@total_fat.id}" do
-          expect(page).to have_content('Total Fat: 1.6 g')
+          expect(page).to have_content('Total Fat 1.6 g')
         end
 
         within "#nutrient-#{@sodium.id}" do
-          expect(page).to have_content('Sodium: 1 mg')
+          expect(page).to have_content('Sodium 1 mg')
         end
 
         within "#nutrient-#{@protein.id}" do
-          expect(page).to have_content('Protein: 1 g')
+          expect(page).to have_content('Protein 1 g')
         end
 
         within "#portion-#{@large.id}" do
