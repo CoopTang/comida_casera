@@ -1,0 +1,41 @@
+<h1><%= ingredient.name %></h1>
+
+<section class='nutrients'>
+  <h3>Nutrients</h3>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+    </tr>
+    <% ingredient.nutrients.each do |nutrient| %>
+      <article id='nutrient-<%= nutrient.id %>'>
+      <tr>
+        <td><%= nutrient.name %></td>
+        <td><%= nutrient.amount %></td>
+      </tr>
+      </article>
+    <% end %>
+  </table>
+</section>
+
+<section class='portions'>
+  <h3>Portions</h3>
+  <% ingredient.portions.each do |portion| %>
+    <article id='portion-<%= portion.id %>'>
+      <ul>
+        <li><%= portion.full_name %></li>
+      </ul>
+    </article>
+  <% end %>
+</section>
+
+<section class='aliases'>
+  <h3>Aliases</h3>
+  <% ingredient.aliases.each do |alias_obj| %>
+    <article id='alias-<%= alias_obj.id %>'>
+      <ul>
+        <li>Name: <%= alias_obj.name %></li>
+      </ul>
+    </article>
+  <% end %>
+</section>
