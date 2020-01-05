@@ -10,7 +10,7 @@ describe 'Ingredients Show Page:' do
           image: 'https://www.seriouseats.com/recipes/images/2014/04/20140430-peeling-eggs-10-1500x1125.jpg'
         )
         @energy    = create(:nutrient_energy, ingredient: @egg)
-        @total_fat = create(:nutrient_total_fat, ingredient: @egg)
+        @total_fat = create(:nutrient_total_fat, value: 1.6, ingredient: @egg)
         @sodium    = create(:nutrient_sodium, ingredient: @egg)
         @protein   = create(:nutrient_protein, ingredient: @egg)
 
@@ -25,22 +25,22 @@ describe 'Ingredients Show Page:' do
 
         expect(current_path).to eq(ingredient_path(@egg))
 
-        expect(page).to have_content('Ingredient: Egg')
+        expect(page).to have_content('Egg')
 
         within "#nutrient-#{@energy}" do
           expect(page).to have_content('Energy: 100 cal')
         end
 
         within "#nutrient-#{@total_fat}" do
-          expect(page).to have_content('Total Fat: 1.0 g')
+          expect(page).to have_content('Total Fat: 1.6 g')
         end
 
         within "#nutrient-#{@sodium}" do
-          expect(page).to have_content('Sodium: 1.0 mg')
+          expect(page).to have_content('Sodium: 1 mg')
         end
 
         within "#nutrient-#{@protein}" do
-          expect(page).to have_content('Protein: 1.0 g')
+          expect(page).to have_content('Protein: 1 g')
         end
 
         within "#portion-#{@large}" do
