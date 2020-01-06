@@ -27,9 +27,6 @@ If you would like to contribute, this project follows Ruby/RuboCop conventions.
 ## Features
 There are a multitude of websites out there to share recipes. There are even sites that will produce a random recipe for you if don't know what to make. Those sites don't take your pantry in mind though. Comida Casera is designed give you recipes you can actually make with what you currently have.
 
-## Code Example
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
-
 ## Installation
 ### Requirements
 - [Ruby 2.6.3](https://github.com/ruby/ruby)
