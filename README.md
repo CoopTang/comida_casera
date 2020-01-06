@@ -11,10 +11,14 @@ Sifting through recipes online is always a chore when you are trying to use ingr
 ## Code style
 If you would like to contribute, this project follows Ruby/RuboCop conventions.
 
-[![ruby-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/rubocop-hq/ruby-style-guide)
+[![ruby-standard-style](https://img.shields.io/badge/code%20style-RuboCop-brightgreen.svg?style=flat)](https://github.com/rubocop-hq/ruby-style-guide)
  
 ## Screenshots
-Include logo/demo screenshot etc.
+#####Homepage:
+![Imgur](https://i.imgur.com/GDD0fow.jpg)
+
+#####Current Database Design:
+![Imgur](https://i.imgur.com/dmwLHRx.jpg)
 
 ## Tech/framework used
 <b>Built with</b>
@@ -75,17 +79,3 @@ This will run all tests in the `/spec` directory.
 
 ## How to use?
 To start the server and view the site from the browser, start the server with `rails s` . By default, the server runs on http://localhost:3000
-
-## Contribute
-
-Let people know how they can contribute into your project. A [contributing guideline](https://github.com/zulip/zulip-electron/blob/master/CONTRIBUTING.md) will be a big plus.
-
-## Credits
-Give proper credits. This could be a link to any repo which inspired you to build this project, any blogposts or links to people who contrbuted in this project. 
-
-#### Anything else that seems useful
-
-## License
-A short snippet describing the license (MIT, Apache etc)
-
-MIT © [Yourname]()
