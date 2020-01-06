@@ -14,10 +14,10 @@ If you would like to contribute, this project follows Ruby/RuboCop conventions.
 [![ruby-standard-style](https://img.shields.io/badge/code%20style-RuboCop-brightgreen.svg?style=flat)](https://github.com/rubocop-hq/ruby-style-guide)
  
 ## Screenshots
-#####Homepage:
+##### Homepage:
 ![Imgur](https://i.imgur.com/GDD0fow.jpg)
 
-#####Current Database Design:
+##### Current Database Design:
 ![Imgur](https://i.imgur.com/dmwLHRx.jpg)
 
 ## Tech/framework used
