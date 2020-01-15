@@ -1,17 +1,13 @@
 ## Comida Casera
+[![Build Status](https://travis-ci.com/CoopTang/comida_casera.svg?branch=master)](https://travis-ci.org/CoopTang/comida_casera) [![ruby-standard-style](https://img.shields.io/badge/code%20style-RuboCop-brightgreen.svg?style=flat)](https://github.com/rubocop-hq/ruby-style-guide)
 A meal planning app designed to give you random recipies to cook. Comida Casera picks a recipe based on what ingredients you have and gives you the nutrition info of the meal.
 
 ## Motivation
 Sifting through recipes online is always a chore when you are trying to use ingredients you already have. Comida Casera is the solution to that problem by picking recipes that only contain the ingredients you have in your pantry or fridge.
 
-## Build status
+## Features
+There are a multitude of websites out there to share recipes. There are even sites that will produce a random recipe for you if don't know what to make. Those sites don't take your pantry in mind though. Comida Casera is designed give you recipes you can actually make with what you currently have.
 
-[![Build Status](https://travis-ci.com/CoopTang/comida_casera.svg?branch=master)](https://travis-ci.org/CoopTang/comida_casera)
-
-## Code style
-If you would like to contribute, this project follows Ruby/RuboCop conventions.
-
-[![ruby-standard-style](https://img.shields.io/badge/code%20style-RuboCop-brightgreen.svg?style=flat)](https://github.com/rubocop-hq/ruby-style-guide)
  
 ## Screenshots
 ##### Homepage:
@@ -24,8 +20,7 @@ If you would like to contribute, this project follows Ruby/RuboCop conventions.
 <b>Built with</b>
 - [Rails 6.0.1](https://rubyonrails.org/)
 
-## Features
-There are a multitude of websites out there to share recipes. There are even sites that will produce a random recipe for you if don't know what to make. Those sites don't take your pantry in mind though. Comida Casera is designed give you recipes you can actually make with what you currently have.
+
 
 ## Installation
 ### Requirements
