@@ -7,4 +7,9 @@ class User < ApplicationRecord
          :rememberable,
          :validatable,
          :confirmable
+
+  validates_presence_of :email
+  validates_presence_of :role
+
+  enum role: %w[default admin]
 end
