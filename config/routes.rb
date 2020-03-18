@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   scope module: 'ingredients' do
-    resources :ingredients, only: %i[show index] do
+    resources :ingredients, only: :index do
     end
   end
 
