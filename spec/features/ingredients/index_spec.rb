@@ -15,15 +15,15 @@ describe 'Ingredient Index Spec:' do
         expect(current_path).to eq(ingredients_path)
 
         within "#ingredient-#{@egg.id}" do
-          expect(page).to have_link('Egg', href: ingredient_path(@egg))
+          expect(page).to have_content('Egg')
         end
 
         within "#ingredient-#{@bacon.id}" do
-          expect(page).to have_link('Bacon', href: ingredient_path(@bacon))
+          expect(page).to have_content('Bacon')
         end
 
         within "#ingredient-#{@whole_milk.id}" do
-          expect(page).to have_link('Milk, whole', href: ingredient_path(@whole_milk))
+          expect(page).to have_content('Milk, whole')
         end
       end
     end
